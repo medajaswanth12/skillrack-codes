@@ -1,0 +1,10 @@
+n=int(input())
+l=list(map(str,input().strip().split()))
+k=int(input())
+ans=0
+temp=0
+for i in l:
+    if int(i[-k])>temp:
+        temp=int(i[-k])
+        ans=i
+print(ans)
