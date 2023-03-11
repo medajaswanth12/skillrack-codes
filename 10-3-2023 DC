@@ -1,0 +1,18 @@
+private static void reverseAlphanumeric(char[] str) {
+    int l =0;
+    int r=str.length-1;
+    while(l<r){
+        if((!((Character.isAlphabetic(str[l]))|| (str[l]>='0'&&str[l]<='9')))){
+            l++;
+        }else if(!((Character.isAlphabetic(str[r]))||(str[r]>='0'&&str[r]<='9'))){
+            r--;
+        }else{
+            char temp=str[r];
+            str[r]=str[l];
+            str[l]=temp;
+            l++;
+            r--;
+        }
+    }
+
+}
