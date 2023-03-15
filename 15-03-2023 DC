@@ -1,0 +1,55 @@
+file:///C:/Users/Siva%20Ganga%20Jaswanth/Downloads/dailychallenge.htm
+
+_________________________________________________________
+_________________________________________________________
+a,b,c=input().split()
+a=int(a)
+c=int(c)
+ma=max(a,c)
+mi=a+c-1
+count=0
+flag=0
+if a>c:
+    f=a-c
+    count =f
+    for i in range(f):
+        print("-"*i,b,sep="")
+    for i in range(a-f):
+        for j in range(mi-i):
+            if count==j or j==mi-i-1:
+                print(b,end="")
+                flag=1
+            else:
+                print("-",end="")
+        if flag==1:
+            flag=0
+            count+=1
+        print()
+    exit(0)
+for i in range(ma):
+    t=mi-i
+    for j in range(t):
+       
+        if a==c:
+            if i==j or j==t-1:
+                print(b,end="")
+            else:
+                print("-",end="")
+        elif a<c:
+            if ma-a>i:
+                if j==t-1:
+                    print(b,end="")
+                else:
+                    print("-",end="")
+            else:
+                if j==t-1:
+                    print(b,end="")
+                elif j==count:
+                    print(b,end="")
+                    flag=1
+                else:
+                    print("-",end="")
+    if flag==1:
+        flag=0
+        count+=1
+    print()
