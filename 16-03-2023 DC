@@ -1,0 +1,8 @@
+
+b,c=map(int,input().split())
+arr=[int(x) for x in input().split()]
+a=sorted([x for x in arr if x%c!=0])
+for i in range(b):
+    if arr[i]%c!=0:
+        arr[i]=a.pop(0)
+print(*arr)
