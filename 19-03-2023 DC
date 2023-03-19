@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    string c;
+    cin>>c;
+    if(c[0]=='*'||c[c.length()-1]=='*')
+    {
+        cout<<"YES";
+        return 0;
+    }
+    for(int i=0;i<c.length();i++)
+    {
+        if(c[i]=='*'&&c[i-1]!=c[i+1])
+        {
+            cout<<"NO";
+            return 0;
+        }
+    }
+    cout<<"YES";
+    return 0;
+}
