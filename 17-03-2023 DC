@@ -1,0 +1,11 @@
+def rev(p):
+    v=set('aeiouAEIOU')
+    s, e= None, None
+    for i,c in enumerate(p):
+        if c.isalpha() and c not in v:
+            if s is None:
+                s=i
+            e=i
+    return p[:s]+p[s:e+1][::-1]+p[e+1:]
+p=input()
+print(rev(p))
