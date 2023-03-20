@@ -1,0 +1,4 @@
+x=input().strip()
+y=input().strip()
+z=int(input())
+print(x[:z]+y[-z:])
