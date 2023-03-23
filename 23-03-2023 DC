@@ -25,3 +25,13 @@ int main(int argc, char** argv)
         }
     }
 }
+________________________________________
+________________________________________
+n=int(input())
+l=list(map(int,input().split()))
+x=int(input())
+for i in l:
+    if i%2==0:
+        print(i+x,end=" ")
+    else:
+        print(i-x,end=" ")
