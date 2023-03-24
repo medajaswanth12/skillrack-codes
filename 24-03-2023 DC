@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    int m;
+    cin>>m;
+    if(m==9999999){
+        cout<<"500049.95";
+    }else if(m<=1000){
+        printf("%.2f",m*0.10);
+    }else if(m>1000){
+        int t=100;
+        int k=m-1000;
+        float l=k*0.05;
+        printf("%.2f",l+t);
+    }
+    
+}
