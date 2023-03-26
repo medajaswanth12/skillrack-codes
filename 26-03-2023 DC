@@ -1,0 +1,6 @@
+a=input().strip()
+for i in a:
+    if i.isupper() and i.lower() in a:
+        print(i,end="")
+    elif i.islower() and i.upper() in a:
+        print(i,end="")
