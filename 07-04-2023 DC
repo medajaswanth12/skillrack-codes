@@ -1,0 +1,7 @@
+a=int(input())
+b=str(a)
+c=''
+for i in range(0,len(b),2):
+    c+=b[i+1]+b[i]
+d=int(c)
+print(d)
