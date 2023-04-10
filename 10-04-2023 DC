@@ -1,0 +1,10 @@
+p=input().strip()
+o=0
+for i in range(len(p)-3):
+    if p[i]==p[i+1] and p[i]==p[i+2]:
+        o+=1
+        break;
+if o>=1:
+    print("invalid")
+else:
+    print("valid")
