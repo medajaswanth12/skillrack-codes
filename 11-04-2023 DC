@@ -1,0 +1,9 @@
+a,b=map(str,input().split())
+c=int(b)
+ans=""
+k=ord(a)
+while(k<=ord('z') and c!=0):
+    ans+=chr(k)
+    k+=1
+    c-=1
+print(ans[::-1])
