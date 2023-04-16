@@ -1,0 +1,45 @@
+#Your code below
+n=int(input())
+l = []
+for i in range(n):
+	l.append(input().strip())
+k=[]
+vow = "aeiouAEIOU"
+for i in l:
+    c=0
+    for j in i:
+        if j not in vow:
+            c+=1
+    k.append(c)
+ind = k.index(max(k))
+print(l[ind])
+________________________________________________________________________________________________________________________________________________________________________
+#include <bits/stdc++.h>
+ 
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    int n;
+    cin>>n;
+    int count=0,pos=0,max=-1;
+    char a[n][1000];
+    for(int i=0;i<n;i++)
+    {
+        count=0;
+        cin>>a[i];
+        for(int j=0;j<strlen(a[i]);j++)
+        {
+            if(a[i][j]!='a'&&a[i][j]!='e'&&a[i][j]!='i'&&a[i][j]!='o'&&a[i][j]!='o'&&a[i][j]!='u'&&a[i][j]!='A'&&a[i][j]!='E'&&a[i][j]!='O'&&a[i][j]!='U'&&a[i][j]!='I')
+            {
+                count++;
+            }
+        }
+        if(max<count)
+        {
+            max=count;
+            pos=i;
+        }
+    }
+    cout<<a[pos];
+}
