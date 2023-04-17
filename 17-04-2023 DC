@@ -1,0 +1,15 @@
+l=input().strip()
+vow="aeiou"
+a=""
+b=""
+for i in l:
+    if i in vow:
+        a+=i
+    else:
+        b+=i
+if len(a)>len(b):
+    print(a)
+elif len(a)==len(b):
+    print(l)
+else:
+    print(b)
