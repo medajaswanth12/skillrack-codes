@@ -1,0 +1,5 @@
+a=input()
+if('a' in a.lower() and 'e' in a.lower() and 'i' in a.lower() and 'o' in a.lower() and 'u' in a.lower()):
+    print('yes')
+else:
+    print('no')
