@@ -1,0 +1,19 @@
+#Your code below
+a,b = map(int,input().split())
+l=[]
+for i in range(a):
+    k = list(map(str,input().strip().split()))
+    l.append(k)
+vow="aeiou"
+for i in range(a):
+    for j in vow:
+        if j not in l[i]:
+            print("NO")
+            exit()
+res = [[l[j][i] for j in range(a)] for i in range(b)]
+for i in range(b):
+    for j in vow:
+        if j not in res[i]:
+            print("NO")
+            exit()
+print("YES")
