@@ -1,0 +1,13 @@
+n,x,y,z=map(int,input().split())
+count,i=0,1
+while count!=n:
+    if i%x==0 and i%y!=0 and i%z!=0:
+        print(i,end=' ')
+        count+=1
+    elif i%y==0 and i%x!=0 and i%z!=0:
+        print(i,end=' ')
+        count+=1
+    elif i%z==0 and i%x!=0 and i%y!=0:
+        print(i,end=' ')
+        count+=1
+    i+=1
