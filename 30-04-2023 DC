@@ -1,0 +1,17 @@
+a=input()
+keys="aeiou"
+res=""
+temp='a'
+count=0
+for i in range(len(a)):
+    if a[i] not in keys:
+        temp=a[i]
+        count+=1
+    else:
+        if count==1:
+            res+=temp
+        count=0
+        res+=a[i]
+if count==1:
+    res+=temp
+print(res)
