@@ -1,0 +1,13 @@
+sen=input()
+key="aeiouAEIOU"
+flag=0
+for i in range(len(sen)//2,len(sen)):
+    if sen[i] in key:
+        print(sen[i],end="")
+        flag=1
+for i in range(len(sen)//2):
+    if sen[i] in key:
+        print(sen[i],end="")
+        flag=1
+if flag==0:
+    print("-1")
