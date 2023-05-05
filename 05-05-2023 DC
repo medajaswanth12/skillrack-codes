@@ -1,0 +1,12 @@
+a,b=map(int,input().split())
+num=int(input())
+s=m=0
+for i in range(num):
+    num1,num2=map(int,input().split())
+    if num1==1:
+        s+=1
+    if num2==1:
+        m+=1
+min1=a*s+b*m
+min2=a*m+b*s
+print(min1 if min1 < min2 else min2)
