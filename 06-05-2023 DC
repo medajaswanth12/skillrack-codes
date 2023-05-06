@@ -1,0 +1,12 @@
+n=input()
+lower="aeiou"
+upper="AEIOU"
+c1,c2=0,0
+for i in n:
+    if c1>0 and c2>0:
+        break
+    if i in upper:
+        c1+=1
+    elif i in lower:
+        c2+=1
+print("YES" if c1>0 and c2>0 else "NO")
