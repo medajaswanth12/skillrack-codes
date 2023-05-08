@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    unsigned long long a,b;
+    scanf("%llu %llu",&a,&b);
+    unsigned long long steps=0;
+    while(a>0)
+    {
+        if(a%b==0)
+        {
+            a/=b;
+            steps++;
+        }
+        else
+        {
+            steps+=a%b;
+            a-=a%b;
+        }
+    }
+    printf("%llu",steps);
+}
