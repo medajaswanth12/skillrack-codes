@@ -1,0 +1,14 @@
+row,column=map(int,input().split())
+arr=[]
+for i in range(row):
+    row_values=list(map(int,input().split()))
+    arr.append(row_values)
+key=int(input())
+key=column-key
+for i in range(row):
+    for j in range(column):
+        if j<key:
+            print(arr[i][j],end=" ")
+        else:
+            print(arr[i][column-1-(j-key)],end=" ")
+    print()
