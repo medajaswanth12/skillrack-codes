@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    char n[10000];
+    int d;
+    cin>>n;
+    cin>>d;
+    for(int i=0;i<strlen(n);i++)
+    {
+        int digit=n[i]-'0';
+        cout<<digit+d;
+    }
+}
