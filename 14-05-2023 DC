@@ -1,0 +1,22 @@
+num=int(input())
+arr=[]
+for i in range(num):
+    s,x=input().split()
+    x=int(x)
+    if s=='+':
+        arr.append(x)
+    elif s=='-':
+        arr.remove(x)
+    elif s=='?':
+        if x==0:
+            even=[a for a in arr if a%2==0]
+            if even:
+                print(*even)
+            else:
+                print("-1")
+        else:
+            odd=[a for a in arr if a%2!=0]
+            if odd:
+                print(*odd)
+            else:
+                print("-1")
