@@ -1,0 +1,19 @@
+#Your code below
+n=int(input())
+l = list(map(int,input().split()))
+e=0;o=0
+ev=[]
+od=[]
+for i in l:
+    if i&1:
+        o+=1
+        od.append(i)
+    else:
+        e+=1
+        ev.append(i)
+if e>o:
+    print(*ev[::-1],*od,sep=" ")
+elif o>e:
+    print(*od[::-1],*ev,sep=" ")
+else:
+    print(*l[::-1])
