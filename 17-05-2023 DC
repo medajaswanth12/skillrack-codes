@@ -1,0 +1,18 @@
+num=int(input())
+absNum=abs(num)
+arr=[['' for j in range(absNum)]for i in range(absNum)]
+count=1
+for i in range(absNum):
+    for j in range(absNum):
+        if j<=i:
+            arr[i][j]=str(count)
+            count+=1
+        else:
+            arr[i][j]='*'
+for i in range(absNum):
+    for j in range(absNum):
+        if num>0:
+            print(arr[i][j],end=' ')
+        else:
+            print(arr[i][absNum-1-j],end=' ')
+    print()
