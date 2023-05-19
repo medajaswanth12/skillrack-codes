@@ -1,0 +1,29 @@
+def modify_number(N):
+    # Convert N to a string for easier digit manipulation
+    str_N = str(N)
+    modified_N = ''
+
+    # Iterate through each digit in the string
+    for digit in str_N:
+        # Convert the digit back to an integer
+        digit = int(digit)
+
+        # Increment even digits and decrement odd digits
+        if digit % 2 == 0:  # Even digit
+            digit += 1
+        else:  # Odd digit
+            digit -= 1
+
+        # Append the modified digit to the new string
+        modified_N += str(digit)
+
+    # Convert the modified string back to an integer
+    modified_N = int(modified_N)
+    return modified_N
+
+# Get input from the user
+N = int(input("Enter an integer: "))
+
+# Call the modify_number function and print the modified N
+modified_N = modify_number(N)
+print("Modified N:", modified_N)
