@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    int x,y,n;
+    cin>>x>>y>>n;
+    int a=x,b=y;
+    for(int i=1;i<=n;i++)
+    {
+        if(i%2!=0)
+        {
+            cout<<" "<<a;
+            a+=x;
+        }
+        else
+        {
+            cout<<" "<<b;
+            b+=y;
+        }
+    }
+    return 0;
+}
