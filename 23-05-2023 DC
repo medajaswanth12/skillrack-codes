@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    int x,n;
+    cin>>x>>n;
+    string temp,res;
+    for(int i=1;i<=n;i++)
+    {
+        int t=x;
+        temp="";
+        if(i%2!=0)
+        {
+            while(t!=0)
+            {
+                temp+=to_string(t%2);
+                t/=2;
+            }
+        }
+        else
+        {
+            while(t!=0)
+            {
+                temp+=to_string(t%8);
+                t/=8;
+            }
+        }
+        reverse(temp.begin(),temp.end());
+        res=temp;
+        cout<<res<<" ";
+        x++;
+    }
+    return 0;
+}
