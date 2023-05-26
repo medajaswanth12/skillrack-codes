@@ -1,0 +1,31 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        String s1[]=sc.nextLine().split(" ");
+        String s2[]=sc.nextLine().split(" ");
+        Integer flag=0,pf=0;
+        for(Integer i=0;i<s1.length;i++)
+        {
+            pf=0;
+            for(Integer j=0;j<s2.length;j++)
+            {
+                if(s1[i].equals(s2[j]))
+                {
+                    pf=1;
+                }
+            }
+            if(pf==0)
+            {
+                System.out.print(s1[i]+" ");
+                flag=1;
+            }
+        }
+        if(flag==0)
+        {
+            System.out.print(-1);
+        }
+    }
+}
