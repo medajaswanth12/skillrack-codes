@@ -1,0 +1,20 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		TreeSet<Integer>treeSet=new TreeSet<Integer>();
+		Integer n=sc.nextInt();
+		for(Integer i=0;i<n;i++)
+		{
+		    treeSet.add(sc.nextInt());
+		}
+		for(Integer i=1;i<=n;i++)
+		{
+		    if(!(treeSet.contains(i)))
+		    {
+		        System.out.print(i+" ");
+		    }
+		}
+	}
+}
