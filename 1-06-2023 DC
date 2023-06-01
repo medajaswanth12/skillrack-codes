@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    string s;
+    int num;
+    cin>>s;
+    cin>>num;
+    int len=s.length();
+    for(int i=num-1;i<len;i+=num)
+    {
+        char temp=s[i];
+        s[i]=s[i-(num-1)];
+        s[i-(num-1)]=temp;
+    }
+    cout<<s;
+}
