@@ -1,0 +1,42 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Integer n=sc.nextInt();
+		Integer u=n-1,num=1,c=0;
+		for(Integer i=1;i<n*2;i++)
+		{
+		    for(Integer j=u;j>0;j--)
+		    {
+		        System.out.print("-");
+		    }
+		    System.out.print("<");
+		    for(Integer k=1;k<=num;k++)
+		    {
+		        if(c>9)
+		        {
+		            c=0;
+		            System.out.print(c);
+		        }
+		        else
+		        {
+		            System.out.print(c);
+		        }
+		        c++;
+		    }
+		    System.out.print(">");
+		    if(i>=n)
+		    {
+		        u++;
+		        num-=2;
+		    }
+		    else
+		    {
+		        u--;
+		        num+=2;
+		    }
+		    System.out.print("\n");
+		}
+	}
+}
