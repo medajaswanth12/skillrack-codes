@@ -1,0 +1,24 @@
+void removeIndices(int arr[], int M, int indices[], int N)
+{
+    int b=0;
+    int arr1[M];
+    for(int i=0;i<M;i++)
+    {
+        arr1[i]=0;
+    }
+    for(int i=0;i<N;i++)
+    {
+        if(indices[i]>=0&&indices[i]<=M)
+        {
+            arr1[indices[i]]=1;
+        }
+    }
+    for(int i=0;i<M;i++)
+    {
+        if(!arr1[i])
+        {
+            arr[b++]=arr[i];
+        }
+    }
+    M=b;
+}
