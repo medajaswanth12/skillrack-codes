@@ -1,0 +1,16 @@
+n=int(input())
+arr=[]
+for i in range(n):
+    row=list(map(int,input().split()))
+    arr.append(row)
+for i in range(n):
+    for j in range(n):
+        temp=arr[i][j]%10
+        if temp!=0 and arr[i][j]%temp==0:
+            while arr[i][j]!=0:
+                print("*",end="")
+                arr[i][j]//=10
+            print(" ",end="")
+        else:
+            print(arr[i][j],end=" ")
+    print()
