@@ -1,0 +1,31 @@
+def bin(s):
+    for char in s:
+        if char not in ['0','1']:
+            return 0
+    return 1
+def oct(s):
+    for char in s:
+        if char not in ['0','1','2','3','4','5','6','7']:
+            return 0
+    return 1
+def dec(s):
+    for char in s:
+        if not char.isdigit():
+            return 0
+    return 1
+def hex(s):
+    for char in s:
+        if not (char.isdigit() or char.upper() in ['A','B','C','D','E','F']):
+            return 0
+    return 1
+s=input()
+if bin(s)==1:
+    print("Binary")
+elif oct(s)==1:
+    print("Octal")
+elif dec(s)==1:
+    print("Decimal")
+elif hex(s)==1:
+    print("Hexadecimal")
+else:
+    print("Invalid")
