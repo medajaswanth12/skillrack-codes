@@ -1,0 +1,9 @@
+n,x=map(int,input().split())
+arr=list(map(int,input().split()))
+count=0
+for i in range(n-x+1):
+    end=i+x
+    sus=set(arr[i:end])
+    if len(sus)==x:
+        count+=1
+print(count)
