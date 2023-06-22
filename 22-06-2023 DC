@@ -1,0 +1,18 @@
+def print_odd_digits(N):
+    odd_digits = []
+    while N > 0:
+        last_digit = N % 10
+        if last_digit % 2 != 0:
+            odd_digits.append(str(last_digit))
+        N //= 10
+
+    if not odd_digits:
+        print(-1)
+    else:
+        odd_digits.reverse()
+        print(' '.join(odd_digits))
+
+
+# Example usage:
+N = int(input("Enter an integer: "))
+print_odd_digits(N)
