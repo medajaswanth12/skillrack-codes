@@ -1,0 +1,6 @@
+a,b=map(int,input().split())
+b=str(b)
+if(str(a%10) in b or str((a//10)%10) in b):
+    print("Valid")
+else:
+    print("Invalid")
