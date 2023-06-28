@@ -1,0 +1,17 @@
+m,n=map(int,input().split())
+arr=[]
+for i in range(m):
+    row=list(map(int,input().split()))
+    arr.append(row)
+val=0
+count=0
+tcount=0
+for i in range(n):
+    tcount=0
+    for j in range(m):
+        if arr[j][i]<0:
+            tcount+=1
+    if count<tcount:
+        count=tcount
+        val=i+1
+print(val if val!=0 else -1)
