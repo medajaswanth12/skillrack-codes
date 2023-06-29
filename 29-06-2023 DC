@@ -1,0 +1,19 @@
+def print_alphabet_positions_reverse(alphabets):
+    positions = []
+    for alphabet in reversed(alphabets):
+        position = ord(alphabet.lower()) - ord('a') + 1
+        positions.append(position)
+    print("Alphabet positions in reverse order:")
+    for position in positions:
+        print(position)
+
+
+# Get input from the user
+N = int(input("Enter the number of alphabets: "))
+alphabets = []
+for i in range(N):
+    alphabet = input("Enter alphabet #{}: ".format(i + 1))
+    alphabets.append(alphabet)
+
+# Call the function to print alphabet positions
+print_alphabet_positions_reverse(alphabets)
