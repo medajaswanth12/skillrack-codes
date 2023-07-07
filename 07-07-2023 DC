@@ -1,0 +1,4 @@
+a,b=map(int,input().split())
+c=(a%10)+(a//10%10)
+d=b-c
+print(((a//100)*10+d)*100+(a%100))
