@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int n,count=0;
+    scanf("%d",&n);
+    int t=n;
+    while(t!=0)
+    {
+        count++;
+        t/=10;
+    }
+    count--;
+    while(count>0)
+    {
+        int f=n/pow(10,count);
+        n%=(int)pow(10,count);
+        int s=n/pow(10,count-1);
+        t=0;
+        while(t<s)
+        {
+            printf("%d",f);
+            t++;
+        }
+        count--;
+    }
+}
