@@ -1,0 +1,6 @@
+n=input()
+a='aeiouAEIOU'
+for i in range(0,len(n)-1):
+    if n[i] not in a and n[i+1] in a:
+        print(n[i],end="")
+        print(n[i+1],end=" ")
