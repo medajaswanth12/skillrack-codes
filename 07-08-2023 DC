@@ -1,0 +1,20 @@
+input_str=input()
+s=input_str.split()
+sum_e=0
+count_o=0
+sum_o=0
+for n in s:
+    temp=int(n)
+    if temp%2==0:
+        sum_e+=temp
+    else:
+        sum_o+=temp
+        count_o+=1
+if sum_e==0:
+    print(-1)
+else:
+    print(sum_e)
+if sum_o==0:
+    print(-1)
+else:
+    print("{:.1f}".format(sum_o/count_o))
