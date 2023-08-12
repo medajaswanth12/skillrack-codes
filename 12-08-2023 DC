@@ -1,0 +1,5 @@
+s=input()
+c=input()[0]
+s=s.replace(c,' ')
+s=s.replace(' ','')
+print(s)
