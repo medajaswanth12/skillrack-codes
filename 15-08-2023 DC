@@ -1,0 +1,7 @@
+s=input()
+vow="aeiouAEIOU"
+for char in s:
+    if char in vow or char.isdigit():
+        print('*',end='')
+    else:
+        print(char,end='')
