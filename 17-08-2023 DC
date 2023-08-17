@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    char b[1001];
+    scanf("%s",b);
+    int k=0,l=0,j;
+    for(int i=0;i<strlen(b);i++)
+    {
+        if(b[i]=='.')
+        {
+            j=i;
+            break;
+        }
+        else
+        {
+            int h=b[i]-48;
+            k=k*10+h;
+        }
+    }
+    for(int i=j+1;i<strlen(b);i++)
+    {
+        int h=b[i]-48;
+        l=l*10+h;
+    }
+    printf("%d.%d",a*k,a*l);
+}
