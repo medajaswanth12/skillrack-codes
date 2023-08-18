@@ -1,0 +1,6 @@
+s=input()
+ss="dc"
+for i,c in enumerate(s):
+    f="%"+ss[i%2]
+    res=f%ord(c)
+    print(res,end="")
