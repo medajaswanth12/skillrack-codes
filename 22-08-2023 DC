@@ -1,0 +1,9 @@
+def rot(a,b):
+    l=len(a)
+    b=b%l
+    ro=a[b:]+a[:b]
+    return ro
+a=input().strip()
+b=int(input())
+res=rot(a,b)
+print(res)
