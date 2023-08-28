@@ -1,0 +1,15 @@
+s=input()
+n=int(input())
+s_l=list(s)
+for i in range(len(s_l)):
+    if n!=0:
+        if i==0 and s_l[i]>'1':
+            s_l[i]='1'
+            n-=1
+        elif s_l[i]>='1' and i!=0:
+            s_l[i]='0'
+            n-=1
+    else:
+        break
+r=''.join(s_l)
+print(r)
