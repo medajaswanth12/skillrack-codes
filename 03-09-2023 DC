@@ -1,0 +1,6 @@
+n=input()
+m=int(input())
+m=m-1
+while(m<len(n)):
+    print(n[m],end="")
+    m=m+2
