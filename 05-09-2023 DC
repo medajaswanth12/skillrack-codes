@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<limits.h>
+int main()
+{
+    int n,d;
+    scanf("%d%d",&n,&d);
+    int s=(int)pow(10,d-1);
+    int e=(int)pow(10,d)-1;
+    int m=INT_MAX;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+        if(arr[i]>=s&&arr[i]<=e&&m>arr[i])
+        {
+            m=arr[i];
+        }
+    }
+    if(m!=INT_MAX)
+    {
+        printf("%d\n",m);
+    }
+    else
+    {
+        printf("-1");
+    }
+}
