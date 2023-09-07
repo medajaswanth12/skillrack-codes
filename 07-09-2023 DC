@@ -1,0 +1,15 @@
+n=int(input())
+s=0;t=0
+l=[]
+for i in range(n):
+    k=input().strip()
+    c=''
+    d=''
+    for j in range(len(k)):
+        if(k[j]>='a'and k[j]<='z') or (k[j]>='A'and k[j]<='Z'):
+            c+=k[j]
+        else:
+            d+=k[j]
+    l.append(c)
+    l.append(d)
+print(max(l,key=len))
