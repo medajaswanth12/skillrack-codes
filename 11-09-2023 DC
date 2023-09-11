@@ -1,0 +1,21 @@
+void printSmallestToLargestDigit(int N)
+{
+    int l=0,s=10;
+    while(N>0)
+    {
+        int k=N%10;
+        if(k>l)
+        {
+            l=k;
+        }
+        if(k<s)
+        {
+            s=k;
+        }
+        N=N/10;
+    }
+    for(int i=s;i<=l;i++)
+    {
+        printf("%d ",i);
+    }
+}
